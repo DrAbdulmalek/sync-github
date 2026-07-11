@@ -17,9 +17,9 @@ Scans `~/GitHub/*/`, pulls latest changes, and reports success/failure for each 
 - Handles diverged histories with `reset --hard` fallback
 - Summary report: success/fail/total counts
 
-## vs git-sync-system
+## vs Repo Sync Toolkit
 
-> **Note**: This is a lightweight helper script for quick bulk sync. For the full-featured sync system with TUI dashboard, token management, HuggingFace support, and real-time monitoring, see [git-sync-system](https://github.com/DrAbdulmalek/git-sync-system).
+> **Note**: This is a lightweight helper script for quick bulk sync. For the full-featured sync system with TUI dashboard, token management, HuggingFace support, and real-time monitoring, see [repo-sync-toolkit](https://github.com/DrAbdulmalek/repo-sync-toolkit).
 
 ## Requirements
 
