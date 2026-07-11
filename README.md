@@ -1,31 +1,32 @@
-# sync-github
+# sync-github — ⚠️ ARCHIVED
 
-Lightweight one-command script to sync all local GitHub repositories.
+> **This repository has been archived. Development has stopped.**
+> 
+> All functionality has been merged into [repo-sync-toolkit](https://github.com/DrAbdulmalek/repo-sync-toolkit) as the **Simple Sync** mode (option 8 in the menu, or `sync-scripts/simple-sync.sh`).
 
-## Usage
+## Migration
 
-```bash
-bash sync-github.sh
-```
+| Old (this repo) | New (repo-sync-toolkit) |
+|-----------------|------------------------|
+| `bash sync-github.sh` | `./sync-scripts/simple-sync.sh [DIR]` |
+| Interactive menu option 8 | Menu option 8: "Simple Sync (no config)" |
 
-Scans `~/GitHub/*/`, pulls latest changes, and reports success/failure for each repo.
+## What repo-sync-toolkit adds on top
 
-## Features
+- Interactive menu with 18 options
+- Push/pull/bidirectional/custom sync
+- Dry-run mode
+- HuggingFace Spaces support
+- Real-time monitoring (inotifywait + polling)
+- systemd service integration
+- Governance checking
+- PyCharm integration
+- Token management
 
-- Auto-detects `main` vs `master` branch naming
-- Fixes unlinked branches automatically
-- Handles diverged histories with `reset --hard` fallback
-- Summary report: success/fail/total counts
+## Original purpose
 
-## vs Repo Sync Toolkit
+This was a simple 54-line script that scanned `~/GitHub` for all git repos and synced them with `git pull --ff-only`. It served its purpose well for zero-config batch syncing, but repo-sync-toolkit now covers this use case and much more.
 
-> **Note**: This is a lightweight helper script for quick bulk sync. For the full-featured sync system with TUI dashboard, token management, HuggingFace support, and real-time monitoring, see [repo-sync-toolkit](https://github.com/DrAbdulmalek/repo-sync-toolkit).
+---
 
-## Requirements
-
-- `git` installed
-- GitHub repositories cloned under `~/GitHub/`
-
-## License
-
-MIT
+**Use repo-sync-toolkit going forward:** https://github.com/DrAbdulmalek/repo-sync-toolkit
